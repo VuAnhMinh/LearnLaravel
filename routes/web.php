@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('Khoa hoc', function(){
+	return "Xin chao cac ban";
+});
+
+Route::get('KhoaPham/Laravel',function(){
+	echo "<h1>Khoa hoc Laravel</h1>";
+});
+
+Route::get('HoTen/{ten}',function($ten){
+	echo "Ten cua ban la ".$ten;
+})->where(['ten'=>'[a-zA-Z]+']);
+
+Route::get('Laravel/{ngay}',function($ngay){
+	echo "Hom nay la ngay ".$ngay;
+})->where(['ngay'=>'[0-9]+']);
